@@ -5,10 +5,11 @@
 :root {
     --clr-neutral: #EBF1F4;
     --clr-dark-neutral: #505355;
-    --clr-primary: #cda5f3;
-    --clr-secondary: #d2f3a5;
+    --clr-primary: #d1a2fc;
+    --clr-secondary: #c9e99c;
 
     height: 100%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -28,7 +29,6 @@ body {
     justify-content: space-between;
     align-items: end;
     font-size: 4rem;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 600;
     color: var(--clr-dark-neutral);
     gap: 40px;
@@ -60,13 +60,30 @@ body {
         border-radius: 5px;
         box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.25);
     }
-    .square:not(.x):not(.o):hover {
+    .square:not(.X):not(.O):hover {
         background-color: var(--clr-dark-neutral);
     }
-    .x {
+    .X {
         background-color: var(--clr-primary);
     }
-    .o {
+    .O {
         background-color: var(--clr-secondary);
+    }
+}
+
+.results {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-style: none;
+    background-color: transparent;
+    font-weight: 600;
+    color: var(--clr-dark-neutral);
+    font-size: 8rem;
+    &::backdrop {
+        backdrop-filter: blur(3px);
     }
 }
